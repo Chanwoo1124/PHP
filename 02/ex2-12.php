@@ -1,15 +1,28 @@
 <?php      
-    class Hello {
-        public $name = "홍길동";        // 프로퍼티(Property)
-
-        function say_hello() {          // 메소드(Method)
-            return $this->name."님 안녕하세요.";
+    class member1{
+        public $name;
+        public $age;
+        
+        public function __construct($name,$age){
+            $this ->name = $name;
+            $this ->age = $age;
         }
+        
+
+
+        public function intro(){
+            echo "이름:".$this -> name."나이:".$this -> age;
+        }
+
     }
 
-    $message = new Hello();
-    echo $message->say_hello();
-    echo "<br>";
+    $c = new member1("서정진",25);
+    
 
-    var_dump($message);
+
+    echo $c -> intro();
+
+
+
+
 ?>
